@@ -1,0 +1,339 @@
+
+.main_tit {
+	position: relative; font-size: 24px; color: $bluegray900; line-height: 100%; @include f_alignCenter;
+}
+
+.badge {
+	width: 48px; height: 26px; @include radius(4px); display: inline-flex; align-items: center; justify-content: center; padding: 5px 0; line-height: 100%;
+	&.important {
+		background: #ffe9e9; color: #ee6464; font-size: 13px; @include semi;
+	}
+}
+
+
+.search-box {
+	display: flex; gap: 6px; margin-right: 12px;
+	&_input + &_btn { 
+		margin-left: 2px;
+	}
+	&_input {
+		height: 40px; border-color: $bluegray200 !important;
+	}
+	.selectbox  {
+		height: 40px; border-color: $bluegray200 !important;
+	}
+	&_btn {          
+		width: 64px !important; font-size: 14px; background: #1486F6; height: 40px; color: $white;
+	}
+}
+
+// 페이지 상단 컨텐츠 TIP 유의사항 
+.cont {
+	&_tip {
+		background: $white; padding: 16px 0 16px 40px; @include radius(12px);  @include board_shadow; position: relative; display: flex; flex-wrap: wrap; align-items: center;
+		&.copious {
+			align-items: flex-start;
+			.icon_img {
+				padding-top: 32px;
+			}
+		}
+		.icon_img {
+			display: block; margin-right: 49px;
+		}
+		ul {
+			margin: auto 0; padding: 4px 0;
+			li {
+				line-height: 180%; font-size: 15px; color: $black; padding-left: 11px; position: relative; white-space: normal;
+				&:before {
+					content: ""; width: 3px; height: 3px; @include radius(50%); background: $bluegray900; position: absolute; display: flex; left: 0; top: 12px;
+				}
+				span, strong, b {
+					font-size: inherit; line-height: inherit; color: inherit; 
+				}
+				p {
+					font-size: 14px; line-height: 30px; color: $black; margin-left: 8px; text-indent: initial;
+				}
+				.top1 {
+					position: relative; top: -1px;
+				}
+				.log_btn  {
+					line-height: 100%; height: 20px; width: 36px; font-size: 13px; padding: 4px 0 3px; position: relative; top: -1px; cursor: default;
+					&.receipt {
+						padding: 3px 0;
+					}
+				}
+				.v_line {
+					margin: 0 12px 1px; height: 14px; 
+				}
+				.txtBtn {
+					color: $blue; text-indent: 0;
+				}
+				.service_cicle {
+					position: relative; top: 1px; margin: 0 4px;
+				}
+				&.f-c_red {
+					&:before {
+						background: $cn_red;
+					}
+				}
+			}
+		}
+		table {
+			border-collapse: collapse; margin: 6px 0 0 178px;
+			tbody{
+				td {
+					height: 40px; @include line(1px, #e6e6e6, 0); font-size: 15px; color: $bluegray900; padding-left: 15px;
+					&.tit {
+						color: $black800; background: #f6faff; width: 188px; text-align: center; padding: 0;
+					}
+				}
+			}
+		}
+		& + .page_search_area {
+			margin-top: 24px !important;
+		}
+	}
+	&_bottom {
+
+	}
+}
+
+.service_cicle {
+	display: inline-block; width: 10px; height: 10px; @include line(1px, $bluegray200, 50%);
+	&.check {
+	background: #0A964A; border-color: #0A964A;
+	}
+}
+
+.radio-calendar {
+	display: block;  border-top: 1px solid $bluegray500;
+	ul {
+		display: flex; @include line(1px, $bluegray100, 12px);  background: $white; border-radius: 0 0 12px 12px; padding: 6px 10px; @include board_shadow; justify-content: center;
+		li {
+			@include flex_center; border-right: 1px solid $bluegray50; width: 76px; height: 60px;
+			.radio-btn {
+				label {
+					flex-direction: column;
+					.day_txt {
+						margin-top: 7px; display: inline-flex; color :$bluegray900;
+					}
+				}
+			}
+			&:last-child {border: 0;}
+		}
+	}
+}
+
+.tit_box {
+	@include f_alignCenter; margin-bottom: 20px; position: relative;
+	h3 {
+		font-size: 20px; @include medium; line-height: 100%; color: $bluegray900; position: relative; @include f_alignCenter;
+		&.point_head {
+			line-height: 100%; align-items: flex-end;
+			&:before {
+				content: ""; width: 2px; height: 18px; background: #6b7a93;  @include radius(10px); margin-right: 10px; display: inline-flex;
+			}
+		}
+	}
+	.button {
+		margin-left: auto; @include radius(3px);
+	}
+	&.btn {
+		margin-bottom: 16px;
+		&.excel_type {
+			margin-bottom: 12px;
+		}
+	}
+}
+
+.page_search_area {
+	display: block;  border-top: 1px solid $bluegray500;
+	&.pd24 {
+		padding: 16px 24px;
+		&_list {
+			gap:12px;
+		}
+	}
+	&_list {
+		display: flex; @include line(1px, $bluegray100, 0);  background: $white; border-radius: 0 0 12px 12px; padding: 16px 36px; @include board_shadow; gap: 12px; flex-wrap: wrap;
+		.search_list_item {
+			@include f_alignCenter;  @include line(1px, $bluegray100, 6px); height: 44px;
+			&.mgL36 {margin-left: 0 !important;}
+			input {border: none; height: 42px;}
+			.selectbox {border: none; height: 42px;}
+			&:last-child {
+				border: none;
+			}
+			&.aptCode_item {
+				input {width: 192px;}
+			}
+			.date_box {
+				padding: 0 0 0 8px; border: 0; align-items: center;
+			}
+			.radio-btn {
+				height: 42px;
+				&.search_type { 
+					input[type="radio"] {
+						&:checked + label {
+							.radio_btn_view {
+								input {
+									cursor: auto; 
+								}
+								.code_search_btn {
+									cursor: pointer;
+								}
+							}
+						}
+						& + label {
+							.radio_btn_view {
+								input {
+									cursor: not-allowed; background-color: transparent;
+									&:disabled {
+										color: $black300;
+									}
+								}
+								display: inline-flex; opacity: 1; width: auto; align-items: center; height: 42px;
+								.code_search_btn {
+									height: 32px; @include radius(6px); cursor: not-allowed; background: $bluegray100;
+									&:before {
+										top: -2px;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		&.pd24 {
+			padding: 16px 24px; gap:12px;			
+		}
+		&.pd12 {
+			padding: 16px 12px; gap:12px;
+		}
+		&.gap12 {
+			gap: 12px;
+		}
+	}
+	.search__btn {
+		height: 44px;
+	}
+}
+
+.search__btn {
+	background: #1486f6; font-size: 14px; @include semi; color: $white; height: 40px; width :112px;
+}
+
+.date_box {
+	display: inline-flex; gap: 8px; background: $white; padding: 5px 16px; @include line(1px, $bluegray100, 6px); align-items: center;
+	input {
+		border: 0;
+	}
+}
+
+.comment {
+	display: block;
+	p {
+		color: $black700; font-size: 14px; line-height: 100%;
+	}
+}
+
+.search_tit {
+	display: flex; padding: 11px 20px 11px 16px;  border-radius: 6px 0 0 6px; @include medium; color: $bluegray900; line-height: 140%; position: relative;
+	&:after {
+		@include befo_after; right: 0; height: 12px; width: 1px; background: $bluegray300; top: 15px;
+	}
+	
+}
+
+.search_select_input {
+	@include f_alignCenter;
+	input {
+		padding-left: 0;
+	}
+}
+
+
+.memo {
+	&_btn{
+		position: relative; 
+		&_check {
+			opacity: 0; position: absolute; width: 1px; height: 1px;
+			&:checked ~ .memo_view {
+				height: auto; z-index: 2; opacity: 1;	padding: 24px 20px 24px;  display: block;
+				.insert_area {
+					position: relative; width: 100%; height: auto; background: rgba(237,239,245,0.6); padding: 16px 20px 30px; border: 0; @include radius(10px);
+					textarea {
+						width: 100%; height: 120px; background: transparent; border: 0; max-width: 100%; min-width: 238px;
+						&:focus {outline: none;}
+					}
+					.txt_byte {
+						font-size: 12px; position: absolute; right: 12px; bottom: 10px; color: $bluegray500; line-height: 100%;
+					}
+				}
+			}
+		}
+		label {
+			display: inline-flex; align-items: center;  gap: 4px; cursor: pointer; position: relative;
+			&:before {
+				content: ""; @include bg("memo_icon"); width: 20px; height: 20px;
+			}
+		}		
+		.txt {
+			color: $bluegray700; font-size: 14px; position: relative;  cursor: pointer; line-height: 100%; margin-bottom: 2px;
+			&:before {
+			@include befo_after; bottom: -1px; left: 0; width: 100%; background: $bluegray700; height: 1px; position: absolute;
+			}
+		}
+		&.view {
+			label {
+				&:before {
+					 @include bg("memo_icon_on");
+				}
+			}
+			.txt {
+				color: $bluegreen800; @include semi;
+				&:before {
+					background: $bluegreen800;
+				}
+			}
+		}
+	}
+	&_view {
+		width: auto; height: 0; background: $white; @include line(1px, $bluegray100, 20px); position: absolute; top: 50%; transform: translateY(-50%); z-index: -20; padding: 0 20px 0; box-shadow: 0 5px 10px rgba(25,33,61,.15); opacity: 0;  min-width: 320px; max-width: 420px; display: none;
+		h4 {
+			color: $bluegray900; font-size: 14px; line-height: 140%; margin: 0 20px 12px 6px; text-align: left; @include ellipsis;
+		}
+		.insert_area {
+			position: relative; width: 100%; height: auto; background: rgba(237,239,245,0.6); padding: 16px 20px 30px; border: 0; @include radius(10px);
+			textarea {
+				width: 100%; height: 120px !important; background: transparent; border: 0; max-width: 100%; min-width: 238px; @include radius(0); padding: 0;
+				&:focus {outline: none;}
+			}
+			.txt_byte {
+				font-size: 12px; position: absolute; right: 12px; bottom: 10px; color: $bluegray500; line-height: 100%;
+			}
+		}
+		
+		p {
+			text-align: left; color: $black800; line-height: 140%; font-size: 14px;
+		}
+	}
+	&_close {
+		@include bg("close_dark"); background-position: center; width: 20px; height: 20px; position: absolute; right: 16px; top: 16px; display: block; overflow: hidden; text-indent: -999px; cursor: pointer;
+	}
+}
+
+.dongho_input {
+	@include f_alignCenter; gap:8px; padding: 0 16px;
+	input {
+		padding: 11px 0; width: 40px;
+	}
+}
+
+.apt_code_search_error {
+	padding: 0 40px; @include f_alignCenter; color: #a84b5c; font-size: 15px; line-height: 100%; margin: 32px 0 0; gap: 8px;
+	& + .board_area {
+		margin-top: 32px !important;
+	}
+}

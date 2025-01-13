@@ -1,0 +1,263 @@
+<html>
+<meta charset="utf-8">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Cache-Control" content="no-cache">
+<meta http-equiv="Expire" content="-1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<head>
+    <title></title>
+    <link rel="stylesheet" href="assets/css/style.min.css">
+<style>
+    .input {
+        width: 1000px;
+        padding: 40px;
+        background: #252525;
+        display: flex;
+        flex-direction: column;
+        transition: all .3s;
+    }
+
+    .input>h2 {
+        font-size: 24px;
+        color: #fff;
+        height: 30px;
+        margin-bottom: 20px;
+    }
+
+    .input>.insert_area {
+        display: flex;
+        gap: 10px;
+        transition: all .3s;
+        flex-wrap: wrap;
+    }
+
+    .input>.insert_area textarea {
+        width: calc(100% - 92px);
+        border: 1px solid #e6e6e6;
+        height: 52px;
+        transition: all .2s;
+        padding: 16px;
+        position: relative;
+    }
+
+    .input>.insert_area .btn {
+        display: flex;
+        margin-left: auto;
+        opacity: 1;
+    }
+
+    .input>.insert_area .btn a {
+        width: 80px;
+        height: 52px;
+        background: #1142A7;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .input>.insert_area .insert_info {
+        display: none;
+        margin-left: auto;
+        width: 100%;
+        height: 0;
+        background: #efefef;
+        transition: all .2s;
+        padding: 0 20px;
+    }
+
+    .input>.insert_area .insert_btn {
+        display: none;
+        justify-content: flex-end;
+        gap: 8px;
+    }
+
+    .input>.insert_area .insert_btn a {
+        width: 100px;
+        height: 52px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid transparent;
+        background: #fff;
+    }
+
+    .input>.insert_area .insert_btn a:first-child {
+        color: #666;
+        border-color: #666;
+    }
+
+    .input>.insert_area .insert_btn a:last-child {
+        background: #1142A7;
+        color: #fff;
+    }
+
+    .input>.insert_area textarea:focus {
+        height: 400px;
+        width: 100%;
+        transition: all .1s;
+    }
+
+    .input>.insert_area:has(textarea:focus) {
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+
+    .input>.insert_area:has(textarea:focus) .btn {
+        opacity: 0;
+        display: none;
+    }
+
+    .input>.insert_area:has(textarea:focus) .insert_info {
+        display: flex;
+        height: 200px;
+        padding: 12px 20px;
+    }
+
+    .input>.insert_area:has(textarea:focus) .insert_btn {
+        opacity: 1;
+        display: flex;
+    }
+
+    .input.--active>.insert_area {
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+
+    .input.--active>.insert_area .btn {
+        opacity: 0;
+        width: 0;
+        height: 0;
+        overflow: hidden;
+    }
+
+    .input.--active>.insert_area .insert_info {
+        display: flex;
+        height: 200px;
+        padding: 12px 20px;
+    }
+
+    .input.--active>.insert_area .insert_btn {
+        opacity: 1;
+        display: flex;
+    }
+</style>
+
+</head>
+
+
+<body>
+    <header class="header">
+        <span class="caption">헤더영역</span>
+        <div class="logo">
+            <h1>소장의품격</h1>
+        </div>
+    
+        <div class="dangi__box">
+            <span class="caption">단지영역</span>    
+            <!-- 단지 정보 노출 영역 -->
+            <div class="dangi__info" title="단지 정보">
+                <b class="dangi__info-code">#52525</b> <!-- 단지코드 -->
+                <h1 class="dangi__info-name"> <!-- 단지명 -->
+                    초롱꽃마을6단지GTX운정역금강펜테리움센트럴파크 
+                </h1>
+                <a class="dangi__info-btn">단지변경
+                </a>
+            </div>
+        </div>
+    
+        <div class="header__info">
+            <!-- 내 정보 영역 -->
+            <div class="profile">
+    
+                <div class="profile__thum">
+                    <span class="caption">내정보 썸네일</span>
+                </div>
+    
+                <div class="profile__info">
+                    <div class="profile__info_my">
+                        <span class="profile_info_team">관리팀</span>
+                        <b class="profile_info_name">유재석 관리소장</b>
+                    </div>
+                    <a class="profile__info_arrow"></a>
+                </div>
+
+            </div>
+        </div>
+    </header>
+    
+    <aside>
+
+    </aside>
+    <main>
+<div class="input">
+    <h2>
+        타이틀
+    </h2>
+    <div class="insert_area">
+        <textarea></textarea>
+        <div class="btn">
+            <a class="">질문등록</a>
+        </div>
+        <div class="insert_info">
+            관리사무소 책임자의 실무와 관련된 문의에 한하여 답변이 가능하며, XpERP/XpBIZ 등 프로그램 사용과 관련된 문의에는 답변이 제공되지 않습니다.<br>
+            질문은 최초 저장 이후 수정 또는 삭제가 불가능합니다.<br>
+            사회 통념상 부적절한 게시물은 약관에 따라 별도의 통지 없이 숨김 처리될 수 있습니다.<br>
+            게시물은 추후 검색에 활용될 수 있으므로, 질문 내용에 개인정보(이름, 전화번호 등)를 포함하지 않도록 주의해 주시기 바랍니다.<br>
+            변호사에게 답변을 요청하는 경우, 2차 상담을 위해 질문자의 개인정보(이름 및 휴대폰 번호)가 제공될 수 있으며, 세부 내용 확인을 위해 유선 상담이 진행될 수 있습니다.<br>
+        </div>
+        <div class="insert_btn">
+            <a class="cancel_btn">취소</a>
+            <a class="submit_btn">등록하기</a>
+        </div>
+    </div>
+
+</div>
+    </main>
+    
+</body>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const inputWrapper = document.querySelector(".input");
+        const textarea = inputWrapper.querySelector("textarea");
+        const cancelBtn = inputWrapper.querySelector(".cancel_btn");
+        const submitBtn = inputWrapper.querySelector(".submit_btn");
+
+        // 입력 상태 업데이트 함수
+        const updateState = () => {
+            if (textarea.value.trim()) {
+                inputWrapper.classList.add("--active");
+            } else {
+                inputWrapper.classList.remove("--active");
+            }
+        };
+
+        // 텍스트 입력 시 상태 업데이트
+        textarea.addEventListener("input", updateState);
+
+        // 취소 버튼 클릭
+        cancelBtn.addEventListener("click", () => {
+            textarea.value = ""; // 내용 초기화
+            inputWrapper.classList.remove("--active"); // 상태 초기화
+        });
+
+        // 등록 버튼 클릭
+        submitBtn.addEventListener("click", () => {
+            if (textarea.value.trim()) {
+                console.log("등록된 내용:", textarea.value); // 데이터 확인
+                textarea.value = ""; // 내용 초기화
+                inputWrapper.classList.remove("--active"); // 상태 초기화
+            } else {
+                alert("내용을 입력해주세요!"); // 내용이 없을 때 경고
+            }
+        });
+
+        // 포커스 해제 시 상태 업데이트 (딜레이 처리)
+        textarea.addEventListener("blur", () => {
+            setTimeout(updateState, 0); // 클릭 후 focus가 빠지도록 지연 처리
+        });
+    });
+</script>
+</html>

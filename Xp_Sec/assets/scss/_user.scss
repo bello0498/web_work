@@ -1,0 +1,97 @@
+.login {
+	&-area{
+		width: 100%; position: relative; display: flex; min-height: calc(100% - 116px); height: fit-content;
+		&:before {
+			content: ""; left: 0; top: 0; position: absolute; height: 410px; width: 100%; background: $primary; z-index: -1;
+		}
+		&.colum {
+			flex-direction: column; 
+		}
+	}
+	&-box {
+		width: 520px; height: 474px; display: flex; margin: 160px auto 40px; @include shadow; flex-direction: column; background: $white; padding: 96px 70px 0; @include radius(16px);
+		input + input {
+			margin: 10px 0 12px;				
+		}
+		h2 {
+			font-size: 32px; line-height: 28px; @include flex_center; gap: 10px; color: $black900;
+		}
+		&.join_search {
+			padding: 60px 70px 78px;
+			h2 {
+				margin-bottom: 32px;
+			}
+		}
+		input {
+			font-size: 15px !important;
+			&::placeholder {
+				color: #999; font-size: 15px;
+			}
+		}
+		.check-btn{
+			input[type=checkbox]+label {
+				font-size: 15px;
+			}
+		}
+	} 
+	
+}
+
+.user {
+	&-check {
+		display: flex; flex-direction: column; margin: 76px auto 0; width: 380px;
+		&_top {
+			display: flex; align-items: center; gap: 4px; flex-direction: column; padding-top: 78px; background: url(../images/Isolation_Mode.png) no-repeat top center;
+			img {
+				object-fit: contain;
+			}
+			strong {
+				font-size: 20px; @include semi; line-height: 28px; color: $bluegray900; margin-top: 10px;
+			}
+			p {
+				font-size: 14px; line-height: 140%; color: $black600; text-align: center;
+			}
+		}
+	}
+	&-edit {
+		&_area{
+			display: flex; flex-direction: column; margin: 28px auto 0; justify-content: flex-start;
+			h3 {
+				font-size: 16px; color: $bluegray900; @include medium; margin-bottom: 16px; display: flex;
+				span {
+					color: #D81D1D; font-size: 13px; margin-top: 1px; display: flex; margin-left: 9px;
+				}
+			}
+		}
+	}
+	&_change {
+		width: 520px; padding: 60px 70px 52px; @include radius(16px); box-shadow: 0 4px 4px rgba(0,0,0,0.1); display: flex; flex-direction: column; margin: 152px auto 40px; background: $white; align-items: center; justify-content: center;
+		ul {
+			display: flex; width: 100%; gap: 10px; flex-wrap: wrap;
+			li {
+				position: relative; display: block; width: 100%;
+				&:focus {
+					cursor: none;
+				}
+				.label {
+					&_input {
+						width: 100%; padding: 16px 16px 16px 142px; letter-spacing: -0.02em; border-color: $bluegray200;
+						&::placeholder {
+							font-size: 15px;
+						}
+						&:hover, &:focus {
+							border-color: $black;
+						}
+					}
+					&_tit {
+						width: 126px; position: absolute; left: 0; top: 20px; text-align: left; border-right: 1px solid $bluegray300; padding: 0 16px 0 20px; height: 16px; font-size: 14px; @include medium; color: $bluegray800; letter-spacing: -0.02em; line-height: 16px;
+					}
+				}
+			}
+		}
+		.button__Box {
+			margin-top: 24px;
+		}
+	}
+} 
+

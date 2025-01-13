@@ -1,0 +1,285 @@
+
+/* 메인 배너 영역 area 부분 */
+.banner-area {
+	width: 818px; height: 420px;
+	/* 첫 화면 3가지 배너가 보이는 부분 */
+	.three-banner {
+		display: flex; gap: 19px;
+	}
+	/* 일정 정보 노출 되는 달력 부분 */
+	.calendar {
+		background: #F2F7FF; @include line(1px, #e2e5eb, 15px); padding: 18px 9px 19px 46px; display: flex;  height: 390px;
+		/* 좌측 정보 표시 부븐 */
+		&-info {
+			padding: 27px 0 0 0;
+			h2 {
+				font-size: 23px; line-height: 26px; margin-bottom: 9px;
+			}
+			p {
+				font-size: 14px; line-height: 22px; color: #666;
+			}
+			.tipBox {
+				margin-top: auto;
+			}
+		}
+		/* 일정 달력 영역 */
+		&-area {
+			margin-left: auto; width: 576px; 
+			/* 날짜 및 요일 노출 부분 */
+			&_top {
+				height: 70px; background: $white; @include radius(10px); margin-bottom: 7px; display: flex; justify-content: center; flex-wrap: wrap;
+				h2 {
+					font-size: 18px; margin: 14px auto 0;
+				}
+				ul {
+					display: flex;  padding: 7px 9px ;
+				}
+			}
+			/* 일자 관련 정보 부분 */
+			&_cont {
+				width: 576px; background: $white; @include radius(10px); height: 276px; padding: 9px;
+				ul {
+					grid-auto-rows: minmax(80px, auto); margin: 0 0 9px;
+					li {
+						height: 80px; @include line(1px, #e2e5eb, 5px); 
+					}
+					&:last-child {margin: 0;}
+				}	
+			}
+			ul {
+				display: grid; gap: 8px 6px; grid-template-columns: repeat(7, 1fr);
+				li {
+					width: 74px; padding: 8px; font-size: 12px; position: relative;
+					/* 일요일 타입 */
+					&.sun {
+						color: #C90000;
+					}
+					/* 토툐일 타입 */
+					&.sat {
+						color: #0083E2;
+					}
+					/* 일자 상태 승인 취소 경우 */
+					&.red {
+						background: #FFF2F2;
+						a {
+							background: #EF706D; @include line(1px, #E26B68, 5px); border-radius: 0 0 5px 5px;
+						}
+					}
+					/* 일자 상태 금액 수정 경우 */
+					&.blue {
+						background: #E8F8FF;
+						a {
+							background: #3EAEDC; @include line(1px, #37A4D0, 5px); border-radius: 0 0 5px 5px;
+						}
+					}
+					/* 일자 상태 카드 승인 경우 */
+					&.green {
+						background: #F8FFF6;
+						a {
+							background: #89C980; @include line(1px, #7FC575, 5px); border-radius: 0 0 5px 5px;
+						}
+					}
+					/* 일자 상태 카드입금 경우 */
+					&.purple {
+						background: #EAEBF9;
+						a {
+							background: #6D70BD; @include line(1px, #5E61AF, 5px); border-radius: 0 0 5px 5px;
+						}
+					}
+					a {
+						color: $white; font-size: 12px; font-weight: 600; line-height: 16px; text-align: center; position: absolute; width: 74px; left: -1px; bottom: -1px; height: 40px; @include flex_center;
+					}
+				}
+			}			
+		}
+	}
+}
+
+/* 이용요금 영역 툴팁 부분 */
+.toolTip {
+	display: flex; align-items: flex-start; color: $d-navy; font-size: 14px; line-height: 160%; font-weight: 500; flex-direction: column; justify-content: center; position: relative;
+	&-info {
+		grid-template-columns: repeat(2, 1fr); gap: 8px 16px; grid-auto-rows: minmax(18px, auto); display: grid; font-size: 13px;
+	}
+	&-menu {
+		position: relative; display: flex; align-items: center; font-size: 13px; line-height: 18px; padding-left: 18px;
+		&:before {
+			@include befo_after; width: 12px; height: 12px; @include radius(2px); left: 0;
+		}
+		/* 금액 수정 */
+		&.blue {
+			&:before {
+				background: #3EAEDC;
+			}
+		}
+		/* 승인 취소 */
+		&.red {
+			&:before {
+				background: #EF706D;
+			}
+		}
+		/* 카드 승인 */
+		&.green {
+			&:before {
+				background: #89C980;
+			}
+		}
+		/* 카드입금 */
+		&.purple {
+			&:before {
+				background: #6D70BD;
+			}
+		}
+	}
+	/* 툴팁 안내 영역 */
+	&-btn {
+		cursor: pointer; display: inline-flex; align-items: center; color: $black; font-size: 13px; line-height: 160%; font-weight: 500; position: relative; margin: 114px 0 10px;
+		&:after {
+			@include befo_after; top: 7px; right: -8px; width: 6px; height: 6px; @include line(1px, #232427, 0); border-width: 1px 1px 0 0; transform: rotate(45deg);
+		}
+	}
+	/* 툴팁 영역 상세 정보 부분 */
+	&-hover {
+		background: rgba(34,34,34,.98); @include radius(8px); position: absolute; width: 400px; height: 152px; padding: 18px 0 18px 24px; transition: all .2s;
+			display: none; z-index: 10;
+		ul {
+			display: flex; flex-direction: column;
+			li {
+				display: flex; position: relative; color: $white; font-size: 12px; font-weight: 400; align-items: baseline; margin-bottom: 9px;
+				p {
+					color: $white; margin-left: 12px; font-size: 12px; line-height: 18px; font-weight: 400;
+				}
+				b {
+					color: $white; font-weight: 600;
+				}
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+		}
+		&.show {
+			z-index: 99; display: flex;
+		}
+		&:after {
+			@include befo_after; width: 34px; height: 8px; top: -8px; left: 150px; background: url(../images/tooltip_ico.png) no-repeat;
+		}
+	}
+	
+	/* 툴팁영역 물음표 아이콘  */
+	.que_ico {
+		display: inline-flex; width: 12px; height: 12px; background: url(../images/qu_ico.png) no-repeat;
+	}
+}
+
+
+/* 로그인 및 내정보 영역 */
+.my-info {
+	width: 390px; height: 390px; background: #f4f6fa; @include line(1px, #e6e6e6, 15px); 
+	/* 로그인이 필요한 경우 기본 */
+	&_login {
+		display: flex; justify-content: center; flex-direction: column; padding: 48px 29px 35px;
+		input {
+			width: 100%; height: 52px; padding: 4px 20px;
+			&::placeholder {
+				font-size: 14px; color: #999;
+			}
+			& + input {
+				margin: 8px 0 12px;
+			}
+		}
+		.flexCont {
+			height: 18px; align-items: center;
+			.txtBtn {
+				&.fs13 {
+					font-size: 14px !important;
+				}
+			}
+			.check-btn {
+				&.txt {
+					.fs13 {
+						font-size: 14px !important;
+					}
+				}
+			}
+		}
+	}
+	/* 로그인 이후 정보노출 영역 */
+	&_connect {
+		display: flex; justify-content: center; flex-direction: column ;padding: 30px;
+		.connect_top {
+			margin-bottom: 14px;
+			p {
+				font-size: 18px; line-height: 20px; color: #232427; padding-left: 4px; display: flex;
+			}
+			strong {
+				@include ellipsis; max-width: 236px; font-weight: 600; font-size: 18px; color: #232427; margin-right: 6px;
+			}
+		}
+		table {
+			padding: 10px 0 12px 20px; background: $white; @include line(1px, #E2E5EB, 3px); display: block; width: 100%;
+			td {
+				height: 30px; font-size: 14.5px; color: #232427; font-weight: 500; padding-left: 16px;
+				&.head {
+					font-size: 14px; font-weight: 400; color: $f_color2; width: 80px; padding: 0;
+				}
+				.ellipsis {
+					@include ellipsis; width: 190px; display: inline-block;
+				}
+			}
+			&:first-child {
+				height: 170px;
+			}
+			&:last-child {
+				height: 84px; padding: 12px 20px;
+			}
+		}
+		table + table {
+			margin-top: 5px;
+		}
+		.connect_bottom {
+			@include flex_center;
+			& .txtBtn {
+				font-weight: 500; font-size: 14px;
+			}
+		}
+	}
+}
+
+/* 메인 우측 하단 배너 */
+.banner-menu {
+	display: grid; width: 534px; grid-template-columns: repeat(2, 1fr); gap: 12px; grid-auto-rows: minmax(auto, 72px); margin-left: auto;
+	a {
+		cursor: pointer;
+	}
+}
+
+/* 메인 공지사항 영역 */
+.board-noti {
+	width: 576px; display: flex; flex-wrap: wrap; 
+	/* 더보기 버튼 */
+	.more {
+		margin-left: auto; display: flex; color: #000; font-size: 14px; font-weight: 500;
+		&:after {
+			@include befo_after; width: 10px; height: 10px; background: url(../images/plus_ico.png) no-repeat center center; position: relative; margin-left: 5px;
+		}
+	}
+	/* 공지사항 리스트 영역 */
+	ul {
+		width: 100%; margin-top: 14px;
+		li { 
+			line-height: 32px; display: flex; position: relative; padding-left: 12px;
+			a {
+				display: flex; width: calc(100% - 92px);
+				span {
+					color: $black; @include ellipsis; max-width: 100%; font-size: 14px;
+				}
+			}
+			&:before {
+				@include befo_after; width: 2px; height: 2px; @include radius(50%); background: #666; margin-left: 2px; left: 0; top: 50%; transform: translateY(-50%);
+			}
+			.date {
+				margin-left: auto; font-weight: 400; color: #777; font-size: 14px;
+			}
+		}
+	}
+}

@@ -1,0 +1,253 @@
+
+.button__Box {
+  display: flex;
+  align-items: center;
+  justify-content: center; gap: 9px;
+}
+
+.button {
+  @include flex_center; cursor: pointer; @include radius(6px); display: inline-flex;
+  &.warning {
+    background: rgba(205,53,53,.05); @include line(1px, rgba(205,53,53,.3), 3px); color: #BC6969 !important;
+  }
+  &__Big {
+    height: 56px; font-size: 16px; font-weight: 600;
+  }
+  &__Basic {
+    height: 48px; font-size: 14px; 
+  }
+  &__Small {
+    height: 40px; font-size: 14px; line-height: 100%;
+  }
+  &__round3 {
+    @include radius(3px);
+  }
+  &__fill {
+    @mixin btn_bg($bg, $font: $white) {
+      background-color: $bg;
+      color:$font;
+    }
+    &.bluegray  {
+      &400 {
+        @include btn_bg($bluegray400);
+      }
+      &500 {
+        @include btn_bg($bluegray500);
+      }
+      &800 {
+        @include btn_bg($bluegray800);
+      }
+      &900 {
+        @include btn_bg($bluegray900);
+      }
+    }
+    &.primary {
+      @include btn_bg($primary);
+      &900 {
+        @include btn_bg($primary900);
+      }
+      &800 {
+        @include btn_bg($primary800);
+      }
+    }
+    &.black {
+      &400 {
+        @include btn_bg($black400);
+      }
+      &500 {
+        @include btn_bg($black500);
+      }
+      &600 {
+        @include btn_bg($black600);
+      }
+      &700 {
+        @include btn_bg($black700);
+      }
+      &800 {
+        @include btn_bg($black800);
+      }
+    }
+    &.gray {
+      background: #f9f9f9; color: $bluegray700; @include line(1px, #e6e6e6, 3px);
+    }
+  }
+
+  &__line {
+    @mixin line_bg($lg, $font: $black) {
+      border: 1px solid $lg;
+      color: $font;
+    }
+    &.black400 {
+      @include line_bg($black400, $black700);
+    }
+    &.bluegray  {
+      &400 {
+        @include line_bg($bluegray400);
+      }
+      &500 {
+        @include line_bg($bluegray500);
+      }
+      &700 {
+        @include line_bg($bluegray700, $bluegray900);
+      }
+      &800 {
+        @include line_bg($bluegray800);
+      }
+      &900 {
+        @include line_bg($bluegray900, $bluegray700);
+      }
+    }
+    &.primary{
+      &800 {
+        @include line_bg($primary800, $primary900);
+      }
+      &900 {
+        @include line_bg($primary900, $primary900);
+      }
+    }
+    &.black {
+      &400 {
+        @include line_bg($black400);
+      }
+      &500 {
+        @include line_bg($black500);
+      }
+      &600 {
+        @include line_bg($black600);
+      }
+      &700 {
+        @include line_bg($black700, $black700);
+      }
+      &800 {
+        @include line_bg($black800, $black800);
+      }
+    }
+  }
+   
+  &__Navy {
+    background: $navy;
+    color: $white;
+    transition: all 0.3s;
+    &_line {
+      color: $navy;
+      @include line(1px, $navy, 0);
+    }
+  }
+  &__darkNavy {
+    //.button__red 버튼 배경
+    background: $d-navy;
+    color: $white;
+    transition: all 0.3s;
+  }
+  &__NavyGray {
+    background: $g-navy;
+    color: $white;
+    transition: all 0.3s;
+  }
+  &__deepNavy {
+    background: #000444;
+    color: $white;
+  }
+  &__gray {
+    //.button__gray 버튼 배경
+    background: #ccc;
+    color: $white;
+    transition: all 0.3s;
+  }
+  &__Green {
+    background: #0f7b41;
+    color: $white;
+    transition: all 0.3s;
+  }
+  &__Blue {
+    background: #1e61e8;
+    color: $white;
+    &_line {
+      color: $blue;
+      @include line(1px, #1e61e8, 0);
+    }
+  }
+  &__darkGray {
+    //.button__gray 버튼 배경
+    background: #666;
+    color: $white;
+    transition: all 0.3s;
+  }
+
+  &__black {
+    //.button__black 버튼 배경
+    background: $black;
+    color: $white;
+    transition: all 0.3s;
+  }
+  &__White {
+    //.button__white 버튼 화이트
+    background: $white;
+    border: 1px solid #999999;
+    color: $black;
+    transition: all 0.3s;
+    &:focus,
+    &:active {
+      border-color: $black;
+    }
+  }
+  &__black_line {
+    //.button__black_line 버튼 배경
+    background: $white;
+    border: 1px solid $black;
+    color: $black;
+  }
+  &__darkGray_line {
+    //.button__black_line 버튼 배경
+    background: $white;
+    border: 1px solid #666;
+    color: #666;
+  }
+  &__gray_line {
+    //.button__black_line 버튼 배경
+    background: $white;
+    border: 1px solid #ccc;
+    color: #666;
+  }
+  &__ligtGray_line {
+    //.button__black_line 버튼 배경
+    background: #f9f9f9;
+    border: 1px solid #e6e6e6;
+  }
+
+  &__round {
+    @include radius(30px);
+  }
+
+}
+
+
+.log_btn {
+  width: 44px; height: 26px; font-size: 13px; @include medium; @include radius(5px); display: inline-flex; justify-content: center; padding: 4px 0; line-height: 140%; 
+  &.request {
+    background: $primary900; color: $white; cursor: pointer;
+  }
+  &.receipt {
+    @include line(1px, rgba(14, 125, 152, .5), 5px); color: #0E7D98;
+  }
+}
+
+.code_search_btn {
+  display: flex; height: 100%; line-height: 100%; cursor: pointer; line-height: 100%; font-size: 13px; background: $bluegray50; color: $bluegray700; width: 92px; @include flex_center; border-radius: 0 6px 6px 0;
+  &:before {
+    @include bg("search_input"); width: 20px; height: 20px; content: ""; background-position: center;
+  }
+}
+
+.button_check {
+  width: 100px; height: 36px; color: $black700; @include medium; font-size: 14px; @include radius(3px);
+  &:before {
+    @include bg('check_box'); position: relative; display: inline-flex; margin-right: 4px; width: 20px; height: 20px; content: ""; background-position: center;
+  }
+  &:active, &:hover, &.active {
+    background: $primary800; color: $white; border-color: $primary800;
+    &:before {
+      @include bg('check_box_on'); background-position: center;
+    }
+  }
+}

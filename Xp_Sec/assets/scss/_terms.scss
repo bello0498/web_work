@@ -1,0 +1,40 @@
+/* 기본 wrap main */
+
+.terms-area {
+	width: 100%; padding: 32px 32px 48px !important;
+	&_header {
+		width: 100%; padding: 20px 16px 20px 32px; @include line(1px, #E2E6EC, 8px); background: #F9FAFB; margin-bottom: 29px;
+		p {
+			font-size: 14px; line-height: 26px; word-break: break-word; color: $black;
+		}
+	}
+
+	&_body {
+		padding: 24px 24px 32px; background: $white; @include radius(12px);
+		.terms_info {
+			strong {
+				@include medium; font-size: 16px; line-height: 26px; color: $black;
+				margin-bottom: 8px; display: block;
+			}
+			div {
+				display: flex; flex-direction: column; color: $black; font-size: 14px; line-height: 24px; @include regular; margin-bottom: 32px;
+				p {
+					display: flex;flex-direction: column; color: $black; padding-left: 20px;text-indent: -19px; font-size: 14px; line-height: 24px; @include regular;
+					& > span {
+						padding-left: 16px;text-indent: -16px;font-size: 14px; line-height: 24px; @include regular;
+						& > span {
+							@include regular;font-size: 14px; line-height: 24px; 
+						}
+					}
+				}
+				&:last-child {margin-bottom: 0;}
+			}
+			table {
+				th {padding: 6px 8px; line-height: 18px; }
+				td {padding: 8px 16px;}
+			}
+			
+		}
+	}
+}
+

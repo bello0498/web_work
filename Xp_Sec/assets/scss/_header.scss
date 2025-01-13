@@ -1,0 +1,74 @@
+
+
+.header {//헤더 영역
+    height: 108px; background: $white; width: 100%; padding: 28px 40px; display: flex; align-items: center;
+
+    .dangi {//단지 정보 부분
+        &__box {display:flex;align-items: center; height: 42px;
+        }
+        &__info { //단지 정보 부분
+            display:flex; 
+            &-name { //단지명
+                font-size: 28px; display: inline-block; align-items: center; line-height: 1.2; width: 100%; max-width: 550px; color: $black
+                @include ellipsis;
+            }
+            &-code { //단지코드
+                font-size: 14px; color: #1460C6; padding: 6px 13px; background: #FFF0F0; border-radius: 30px; margin-right: 10px;
+            }
+            &-btn {
+
+            }
+        }
+    }
+
+    &_right {
+        display: flex; margin: 0 0 0 auto; position: relative;
+    }
+
+    .main-search {//통합검색 영역
+        display: block; margin: 0 20px 0 0; position: relative;
+        &__input {//검색입력
+            width: 256px; height: 44px; background: #f1f1f1; border-radius: 25px; font-size: 16px; padding: 8px 50px 8px 25px;
+        }
+        &__btn {//검색버튼-submit
+            display: block; width: 40px; height: 43px; @include bg('search_ico', $format:'svg'); background-position: center; background-size: 20px; position: absolute;text-indent: -9999px;top: 1px;right: 10px;
+        }
+    }
+
+    .profile {//내정보 영역
+        display: flex; align-items: center;height: 40px; position: relative;
+        &__thum {//썸네일
+            padding: 10px; width: 40px; height: 40px; display: inline-flex; align-items: center; justify-content: center; border-radius: 50%; background: rgb(74 70 85 / 5%); margin-right: 15px; overflow: hidden;
+            img {height: 40px;}
+            .none {
+                width: 40px; height: 40px; background:url("../images/noThum_ico.svg") no-repeat center center #f1f1f1;
+            }
+        }
+        &__info {//팀 및 이름 직급정보
+            display: inline-flex;line-height: 1.25; position: relative; padding-right: 30px; margin-right: 20px;
+            &_my {
+                display: flex; flex-direction: column; margin-right: 20px;
+            }
+            &_arrow {
+                position: relative; @include flex_center; width: 12px;
+                &:before {
+                    @include befo_after; width: 8px; height: 8px; border: 2px solid #999; border-width: 0 2px 2px 0; transform: rotate(45deg);
+                }
+                &:hover:before {
+                    transform: rotate(45deg) scale(-1);transition: all .3s;
+                }
+            }
+        }
+        &__info:after {
+            @include befo_after; width: 1px; height: 100%; top: 0; background: #ccc; right: 0; color: $f_color1;
+            /*  이부분은 추후에 따로 추가가 될 가능성이 있어 일단 만들어둔 후 주석표시
+            &_team {//소속팀
+
+            }
+            &_name {//이름 계급
+
+            }
+            */
+        }
+    }
+}
