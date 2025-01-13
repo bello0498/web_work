@@ -1,0 +1,649 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<link rel="stylesheet" href="css/style.min.css" type="text/css" media="screen"/>
+<link rel="stylesheet" href="css/jquery.bxslider.css" type="text/css" media="screen"/>
+
+<script src="js/jquery-3.6.4.min.js"></script>
+<script src="js/jquery.bxslider.js"></script>
+
+<body>
+
+
+<header class="header">
+    <section class="header-top">
+        <h1 class="logo"><a>아파트데스크</a></h1>
+        <section class="header-info">
+            <div class="header-info_connect">
+                <b class="f-c_black connect_time">
+                    <span class="time_ico"></span>
+                    <div id="">7:08</div>
+                    <a class="txtBtn underLine f-c_black">연장</a>
+                </b>
+                <span class="vLine m12 h12p"></span>
+                <div class="myInfo_toggle">
+                    <input type="checkbox" id="myInfo">
+                    <label for="myInfo">
+                        <span>(99991) 이지스아파트</span>
+                    </label>
+                    <div class="myInfo_toggle_btnBox">
+                        <a class="txtBtn">정보수정</a>
+                        <a class="txtBtn">로그아웃</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <nav class="nav">
+            <ul>
+                <li class="nav-menu"><a href="#">신청자 조회</a></li>
+                <li class="nav-menu"><a href="#">수납 조회</a></li>
+                <li class="nav-menu"><a href="#">카드 자동이체</a></li>
+                <li class="nav-menu"><a href="#">금액 수정</a></li>
+                <li class="nav-menu"><a href="#">한전 인터넷 검침</a></li>
+                <li class="nav-menu"><a href="#">고객센터</a></li>
+            </ul>
+        </nav>
+    </section>
+
+    <section class="nav-sub">
+        <nav class="nav-sub_box">
+            <ul>
+                <li><a href="#">자동이체 신청 내역</a></li>
+                <li><a href="#">월별 신청자 확인</a></li>
+                <li><a href="#">이중 신청자 조회</a></li>
+                <li><a href="#">신청자 확인 요청</a></li>
+            </ul>
+            <ul>
+                <li><a href="#">자동이체 수납 내역</a></li>
+                <li><a href="#">기타 수납 내역</a></li>
+                <li><a href="#">이중 수납 확인</a></li>
+                <li><a href="#">은행 지점 처리 수납 내역</a></li>
+                <li><a href="#">아파트아이 결제 내역</a></li>
+            </ul>
+            <ul>
+                <li><a href="#">카드 승인 내역</a></li>
+                <li><a href="#">카드 승인 취소</a></li>
+                <li><a href="#">전출자 카드 자동이체 해지</a></li>
+                <li><a href="#">카드 결제대행 자료 조회</a></li>
+            </ul>
+
+            <ul>
+                <li><a href="#">자동이체 금액 수정</a></li>
+            </ul>
+            <ul>
+                <li><a href="#">검침 자료 조회</a></li>
+                <li><a href="#">부과 결과 조회</a></li>
+                <li><a href="#">검침 자료 업로드</a></li>
+                <li><a href="#">인터넷 검침 신규 신청</a></li>
+                <li><a href="#">검침 담당자 정보 변경</a></li>
+            </ul>
+            <ul>
+                <li><a href="#">공지사항</a></li>
+                <li><a href="#">자주 하는 질문</a></li>
+                <li><a href="#">사이트 이용 설명</a></li>
+                <li><a href="#">1:1 문의하기</a></li>
+                <li><a href="#">서식 자료실</a></li>
+            </ul>
+        </nav>
+
+    </section>
+
+</header>
+    <main id="wrap">
+    <section class="section section-main">
+        <section class="banner-area">
+            <div class="slider">
+                <!-- 250113 보조수납계좌 추가 영역 맨 첫번째 영역에 추가 // 시작-->
+                <div>
+                    <!-- 250113 현재 수납하는 은행의 계좌 
+                        bank_account before 
+                        bank_name 영역에 단지별 사용하는 계좌은행명 표기
+                    -->
+                    <div class="bank_account before">
+                        <em class="bank_name">OO은행</em><span class="bank_num">124-12-123456</span>
+                    </div>
+                    
+                    <!-- 보조 수납계좌 국민은행 영역 추가
+                        bank_name 영역에 단지별 사용하는 계좌은행명 표기
+                    -->
+                    <div class="bank_account after">
+                        <em class="bank_name">KB국민은행</em><span class="bank_num">930-156-456546</span>
+                    </div>
+                    <img src="images/Banner.png" usemap="#Map" alt="보조수납계좌 추가 배너">
+                    <map name="Map">
+                        <area shape="rect" coords="44,318,201,360" href="#">
+                    </map>
+                </div>
+                <div class="calendar">
+                    <div class="calendar-info">
+                        <h2>
+                            관리비<br>
+                            자동이체 일정
+                        </h2>
+                        <p>
+                            영업일(평일)기준입니다.<br>
+                            일정을 클릭하시면<br>
+                            해당 메뉴로 이동합니다. 
+                        </p>
+                        <div class="toolTip"><!-- 241127 클래스 변경 -->
+                            <a class="toolTip-btn">
+                                <span class="que_ico mgR4"></span>
+                                안내
+                            </a>
+                            <div class="toolTip-info">
+                                <span class="toolTip-menu blue">금액수정</span>
+                                <span class="toolTip-menu red">카드승인취소</span><!-- 241127 문구 수정 -->
+                                <span class="toolTip-menu green">카드승인</span>
+                                <span class="toolTip-menu purple">카드입금</span>
+                                <span class="toolTip-menu orange">카드재승인 <b class="card_date">:&nbsp; 11/29<b>~</b>12/25</b></span><!-- 241127 문구 수정 -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="calendar-area">
+                        <div class="calendar-area_top">
+                            <h2>2023.09.21</h2>
+                            <ul>
+                                <li class="sun">SUN</li>
+                                <li>MON</li>
+                                <li>TUE</li>
+                                <li>WED</li>
+                                <li>THU</li>
+                                <li>FRI</li>
+                                <li class="sat">SAT</li>
+                            </ul>
+                        </div>
+                        <div class="calendar-area_cont">
+                            <ul>
+                                <li class="sun">9/17</li>
+                                <li>9/18</li>
+                                <li>9/19</li>
+                                <li>9/20</li>
+                                <li class="blue">9/21
+                                    <a class="">
+                                        카드금액수정<br>
+                                        D-5
+                                    </a>
+                                </li>
+                                <li class="green">9/22
+                                    <a class="">
+                                        카드승인<br>
+                                        D-4
+                                    </a>
+                                </li>
+                                <li class="sat">9/23</li>
+                                <li class="sun">9/24</li>
+                                <li class="blue">9/25
+                                    <a class="">
+                                        은행금액수정<br>
+                                        D-3
+                                    </a>
+                                </li>
+                                <li class="red">9/26
+                                    <a class="">
+                                        카드승인취소<br><!-- 241127 문구 수정 -->
+                                        D-2
+                                    </a>
+                                </li>
+                                <li class="purple">9/27
+                                    <a class="">
+                                        카드입금<br>
+                                        D-1
+                                    </a>
+                                </li>
+                                <li>9/28</li>
+                                <li>9/29</li>
+                                <li class="sat">9/30</li>
+                                <li class="sun">10/1</li>
+                                <li>10/2</li>
+                                <li>10/3</li>
+                                <li class="red">10/4
+                                    <a class="">
+                                        납부마감일<br>
+                                        D-Day
+                                    </a>
+                                </li>
+                                <li>10/5</li>
+                                <li>10/6</li>
+                                <li class="sat">10/7</li>
+                                <!-- 241101 재승인 추가 관련 캘린더 영역 추가 // 시작 -->
+                                <li class="sun">10/1</li>
+                                <li>10/2</li>
+                                <li>10/3</li>
+                                <li class="orange"> <!-- orange 경우 재승인 타입 -->
+                                    10/4
+                                    <a class="">
+                                        카드재승인<br>
+                                        D+5
+                                    </a>
+                                </li>
+                                <li>10/5</li>
+                                <li>10/6</li>
+                                <li class="sat">10/7</li>
+                                <!-- 241101 재승인 추가 관련 캘린더 영역 추가 // 시작 -->
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="three-banner">
+                    <a class="" href="html/header.html">
+                        <img src="images/main_banner_1dept.png" alt="수납대행 계약안내 배너">
+                    </a>
+                    <a class="" href="html/footer.html">
+                        <img src="images/main_banner_2dept.png" alt="수납계좌 변경안내 배너">
+                    </a>
+                    <a class="" href="html/error_page.html">
+                        <img src="images/main_banner_3dept.png" alt="자주하는 질문 배너">
+                    </a>
+                </div>
+            </div>
+            <div class="toolTip-hover">
+                <ul>
+                    <li>
+                        <b class="toolTip-menu blue">금액수정</b>
+                        <p>부과마감 이후 금액이 변경된 경우 수정 가능한 기간</p></li>
+                    <li>
+                        <b class="toolTip-menu red">카드승인취소</b><!-- 241127 문구 수정 -->
+                        <p>
+                            카드 대금이 관리소로 입금되기 전(D-1)까지 가능<br>
+                            (세대 직접 환급 또는 '카드승인취소' 메뉴에서 접수)
+                        </p>
+                    </li>
+                    <li>
+                        <b class="toolTip-menu green">카드승인</b>
+                        <p>
+                            카드사로 관리비 데이터를 전송하는 날짜. 당일, 익일 중 승인
+                        </p>
+                    </li>
+                    <li>
+                        <b class="toolTip-menu purple">카드입금</b>
+                        <p>납부마감일 기준 하루 전 카드 대금 입금</p>
+                    </li>
+                    <li>
+                        <b class="toolTip-menu orange">카드재승인</b><!-- 241127 문구 수정 -->
+                        <p>재승인 요청 가능한 기간 (납부마감일 D-2 ~ D+5)</p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <aside class="my-info">
+            <div class="my-info_connect">
+                <div class="connect_top">
+                    <p>
+                        <strong>
+                            나주 빛가람 중흥S클래스 센트럴
+                        </strong>
+                        단지정보
+                    </p>
+                </div>
+                <div class="connect_info">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td class="head">아파트코드</td>
+                                <td>99990</td>
+                            </tr>
+                            <tr>
+                                <td class="head">전산업체</td>
+                                <td>이지스엔터프라이즈</td>
+                            </tr>
+                            <tr>
+                                <td class="head">사업자번호</td>
+                                <td>
+                                    <!-- 240730 사업자번호 툴팁 추가 // 시작 -->
+                                    <div class="flexCont">
+                                        <span>120-86-14122</span>
+                                        <div class="hover_toolTip mgL4 centerType">
+                                            <a class="hover_toolTip-btn">
+                                                <img src="../images/help.png">
+                                            </a>
+                                            <div class="hover_toolTip-view w260p">
+                                                <p>
+                                                    카드로 결제된 관리비 금액과 건수에 대해 <br>
+                                                    분기별로 국세청에 매출 자료가 전송됩니다.<br>
+                                                    관련하여 등록된 <b>사업자 번호가 상이할 경우 <br>
+                                                    반드시 변경</b>하여 주시기 바랍니다.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <!-- 241101 재승인 영역 추가 관련 달력 영역 변경으로 인한 클래스 추가 및 수정 // 시작 -->
+                                <td class="head h44p pdT4">수납계좌</td>
+                                <td class="h44p">
+                                    <div class="flexCont">
+                                        <div class="line_h_22">
+                                            BC카드(바로카드)<br>
+                                                (77200104244548)
+                                            <div class="hover_toolTip mgL2 centerType">
+                                                <a class="hover_toolTip-btn line_h_18 display_i_b">
+                                                    <img src="../images/warning_b_line_ico.svg" alt="느낌표 아이콘">
+                                                </a>
+                                                <div class="hover_toolTip-view w192p">
+                                                    <p>
+                                                        <b>수납계좌 변경 처리중</b>입니다.<br>
+                                                        정보수정 메뉴에서 접수 내역 <br>
+                                                        확인이 가능합니다.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <!-- 241101 재승인 영역 추가 관련 달력 영역 변경으로 인한 클래스 추가 및 수정 // 끝 -->
+                            </tr>
+                            <tr>
+                                <td class="head">예금주명</td>
+                                <td class="line_h_14"><span class="ellipsis fs14">김포한강자연앤힐스테이트아파트</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td class="head">한전 자료전송</td>
+                                <td>09월 11일 16시까지</td>
+                            </tr>
+                            <tr>
+                                <td class="head">한전 부과결과</td>
+                                <td>09월 14일 15시 이후</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="connect_bottom">
+                    <a class="txtBtn f-w_400">정보수정</a>
+                    <span class="vLine h12p m16"></span>
+                    <a class="txtBtn f-w_600 f-c_black">로그아웃</a>
+                </div>
+            </div>
+        </aside>
+        
+    </section>
+    <!-- 중단 바로가기 아이콘 메뉴 -->
+    <section class="section section-full pdB32 pdT32">
+        <div class="icon-menu">
+            <ul>
+                <li>
+                    <a class="icon-menu_link">
+                        <figure class="icon-menu_thum menu01">
+                            <span class="caption">자동이체 신청내역 아이콘</span>
+                        </figure>
+                        <span class="icon-menu_name">자동이체 신청내역</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="icon-menu_link">
+                        <figure class="icon-menu_thum menu02">
+                            <span class="caption">자동이체 금액수정 아이콘</span>
+                        </figure>
+                        <span class="icon-menu_name">자동이체 금액수정</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="icon-menu_link">
+                        <figure class="icon-menu_thum menu03">
+                            <span class="caption">전출자 카드 자동이체 해지 아이콘</span>
+                        </figure>
+                        <span class="icon-menu_name">전출자 카드 자동이체 해지</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="icon-menu_link">
+                        <figure class="icon-menu_thum menu04">
+                            <span class="caption">자동이체 수납내역 아이콘</span>
+                        </figure>
+                        <span class="icon-menu_name">자동이체 수납내역</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="icon-menu_link">
+                        <figure class="icon-menu_thum menu05">
+                            <span class="caption">카드 승인취소 아이콘</span>
+                        </figure>
+                        <span class="icon-menu_name">카드 승인취소</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="icon-menu_link">
+                        <span class="icon-menu_thum menu06">
+                            <span class="caption">인터넷 검침 신규 신청 아이콘</span>
+                        </span>
+                        <span class="icon-menu_name">인터넷 검침 신규 신청</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <!-- 공지사항 영역 -->
+    <section class="section section-bottom">
+        <div class="board-noti">
+            <h3 class="fs18 h20p">공지사항</h3>
+            <a class="txtBtn more h20p">
+                더보기
+            </a>
+            <!-- 공지사항 항목 -->
+            <ul>
+                <li><a><span>9월 27일(수) 단축업무 안내(~14시까지)</span></a><span class="date">2023-09-12</span></li>
+                <li><a><span>2023년 10월 2일 임시공휴일 휴무 안내</span></a><span class="date">2023-09-01</span></li>
+                <li><a><span>8월 28일자 신한은행 수납결과 지연안내(15시 30분...</span></a><span class="date">2023-08-29</span></li>
+                <li><a><span>8월 25일자 신한은행 수납결과 지연안내</span></a><span class="date">2023-08-28</span></li>
+            </ul>
+        </div>
+        <div class="vLine">
+            <span class="caption">세로 줄</span>
+        </div>
+        <!-- 하단 배너 메뉴 영역 -->
+        <div class="banner-menu">
+            <a class="">
+                <img src="../images/banner_link_01.png" alt="아파트아이 앱 다운로드" >
+            </a>
+            <a class="">
+                <img src="../images/banner_link_02.png" alt="세무주치의 세무지원신고" >
+            </a>
+            <a class="">
+                <img src="../images/banner_link_03.png" alt="무료 아파트 홈페이지 신청" >
+            </a>
+            <a class="">
+                <img src="../images/banner_link_04.png" alt="ERP 회계운영사" >
+            </a>
+            <a class="" style="display: none;">
+                <img src="../images/banner_link_05.png" alt="고지금액 업로드" >
+            </a>
+            <a class="" style="display: none;">
+                <img src="../images/banner_link_06.png" alt="우리아파트 홈페이지" >
+            </a>
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    <div class="foot-link">
+        <div class="foot-link_box">
+            <div class="foot-link_menu">
+                <a href="#">회사소개</a>
+                <span class="vLine"></span>
+                <a class="f-c_black" href="#">개인정보처리방침</a>
+                <span class="vLine"></span>
+                <a class="f-c_black" href="#">전자금융이용약관</a>
+                <span class="vLine"></span>
+                <a href="#">사이트맵</a>
+                <span class="vLine"></span>
+                <a href="#">단지검색(우리은행)</a>
+            </div>
+            <div class="family_site selectbox">
+                <select name="select" onchange="window.open(value,'_blank');">
+                    <option value="main.html">관계사사이트</option>
+                    <option value="https://www.aegisep.com/aegisep/">이지스엔터프라이즈(주)</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="foot-bottom">
+        <div class="foot-logo">
+
+        </div>
+        <div class="foot-info">
+            <p>
+                <span>이지스엔터프라이즈(주)</span><span class="vLine bgE6 m8"></span><span>서울시 금천구 가산디지털2로 98 IT캐슬 2동 714호</span>
+            </p>
+            <p>
+                <span>대표 : 최병인</span><span class="vLine bgE6 m8"></span><span>사업자등록번호 : 120-86-14122</span><span class="vLine bgE6 m8"></span>
+                <span>전화번호 : 1566-0157</span><span class="vLine bgE6 m8"></span><span>팩스번호 02)6281-7321</span>
+            </p>
+            <p>
+                <span>Copytight©Aegisenterprise all rights reserved.</span>
+            </p>
+        </div>
+        <a class="foot-aptcn" href="https://jeonsan.aptdesk.com/jeonsan" target="_blank">
+            APTCN_바로가기
+        </a>
+        <div class="foot-isms">
+
+        </div>
+    </div>
+    
+</footer>
+<script>
+    function go_url(url)
+    {
+        if(url != '')   window.open(url,'_blank');
+        //self.location.href=this.value
+    }
+</script>
+
+
+</body>
+
+<script>
+    // Load header.html
+    fetch('html/header.html')
+        .then(response => response.text())
+        .then(html => {
+            document.getElementById('header').innerHTML = html;
+        });
+
+    // Load footer.html
+    fetch('html/footer.html')
+        .then(response => response.text())
+        .then(html => {
+            document.getElementById('footer').innerHTML = html;
+        });
+
+    $(document).ready(function() {
+        $(".nav-menu").click(function() {
+            alert("하이");
+        });
+    
+        $(".nav-menu").hover(function() {
+            $(".nav-sub").show();
+            var index = $(this).index();
+            $(".nav-sub ul").removeClass("active"); // 모든 .nav-sub ul에서 active 클래스 제거
+            $(".nav-sub_box ul").eq(index).addClass("active"); // 호버된 .nav-menu와 순서가 같은 .nav-sub_box ul에 active 클래스 추가
+            
+        }, function() {
+            // 마우스가 .nav-menu에서 벗어날 때 .nav-sub를 숨깁니다.
+            $(".nav-sub").hide();
+        });
+        
+        // .nav-sub에 호버할 때 유지하기 위한 처리
+        $(".nav-sub").hover(function() {
+            $(this).show();
+        }, function() {
+            $(this).hide();
+        });
+    });
+
+    $(document).ready(function(){
+        $(".toolTip-btn").on("mouseenter", function(e) {
+            // 계산된 위치를 설정합니다.
+            var $btn = $(this);
+            var btnWidth = $btn.outerWidth();
+            var btnHeight = $btn.outerHeight();
+            
+            var btnOffset = $btn.offset();
+            var x = btnOffset.left;
+            var y = btnOffset.top + btnHeight + 10;
+
+            $(".toolTip-hover")
+                .css({
+                    left: x + "px",
+                    top: y + "px"
+                })
+                .addClass("show");
+            });
+
+            $(".toolTip-btn").on("mouseleave", function() {
+                $(".toolTip-hover").removeClass("show");
+            });
+    });
+
+    document.addEventListener("DOMContentLoaded", function () {
+    const navMenuItems = document.querySelectorAll(".nav-menu");
+    const navSub = document.querySelector(".nav-sub");
+
+    // 마우스가 .nav-menu 위에 있을 때 이벤트 처리
+    navMenuItems.forEach((menuItem, index) => {
+        menuItem.addEventListener("mouseover", function () {
+            // 모든 .nav-sub ul 요소에서 active 클래스 제거
+            const navSubUlItems = navSub.querySelectorAll("ul");
+            navSubUlItems.forEach((ulItem) => {
+                ulItem.classList.remove("active");
+            });
+
+            // 현재 .nav-sub ul에 active 클래스 추가
+            navSubUlItems[index].classList.add("active");
+
+            // .nav-sub에 hover 클래스 추가
+            navSub.classList.add("hover");
+        });
+
+        menuItem.addEventListener("mouseleave", function () {
+            // 모든 .nav-sub ul 요소에서 active 클래스 제거
+            const navSubUlItems = navSub.querySelectorAll("ul");
+            navSubUlItems.forEach((ulItem) => {
+                ulItem.classList.remove("active");
+            });
+        });
+    });
+
+    // .nav-sub를 벗어났을 때 이벤트 처리
+    navSub.addEventListener("mouseleave", function () {
+        // .nav-sub에서 hover 클래스 제거
+        navSub.classList.remove("hover");
+    });
+});
+    // 250113 bx-slider 옵션 및 수정
+    $(window).on('load', function () {
+        $('.slider').bxSlider({
+            auto: true,                  // 자동넘어가기 여부
+            autoStart: true,            // 자동시작 여부(false일경우 start클릭시 슬라이드시작)
+            autoControls: true,       // 시작/멈춤 버튼 노출 여부
+            autoHover: false,           // 마우스 오버시 정지 여부
+            pause: 10000,               // 자동 전환사이의 시간
+            randomStart: false,          // 랜덤 스타트
+            responsive: false,           // 반응형 여부 체크
+            pager: true,              // 현재 페이지 버튼 노출 여부
+            infiniteLoop: true,        // 마지막이미지에서 다음버튼 클릭시 처음이미지
+            controls: true,           // 이전/다음 버튼 노출 여부
+            mode: 'horizontal',             //horizontal, fade, vertical
+            touchEnabled: (navigator.maxTouchPoints > 0),
+            // pagerCustom: '.custom-pager', // 커스텀 인디케이터 연결
+        }); 
+    });
+</script>
+</html>
+
+
+<!-- 250113 계좌 추가 영역 스타일 메인 page에만 추가 -->
+<style>
+    .bank_account {position: absolute; left: 108px; top: 178px; background: #fff6cc; display: flex; gap: 4px; padding: 2px 4px;}
+    .bank_account.after {top: 205px; }
+    .bank_account .bank_name {color: #333; font-size: 14px; letter-spacing: -0.01em; font-style: normal; font-weight: 400;}
+    .bank_account .bank_num {color: #333; font-size: 14px; letter-spacing: -0.01em;  font-weight: 400;}
+</style>
