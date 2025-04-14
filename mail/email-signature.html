@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>메일 서명</title>
+    <link rel="stylesheet" as="style" crossorigin=""
+        href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+    <style>
+        .copy-btn {
+            margin: 10px 0;
+            padding: 8px 20px;
+            background: #252525;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-family: 'Pretendard', sans-serif;
+            display: inline-flex;
+            height: 36px;
+            align-items: center;
+        }
+
+        .code-box {
+            background: #fafafa;
+            padding: 12px 24px;
+            border-radius: 10px;
+            font-size: 12px;
+            font-family: monospace;
+            white-space: pre-wrap;
+            overflow-x: auto;
+            display: inline-block; 
+        }
+    </style>
+</head>
+
+<body>
+
+
+
+<!-- 👉 원본 서명 디자인 -->
+<div style="display: flex; gap: 40px; justify-content: center;">
+
+<div style="justify-content: center;">
+    <h3 style="margin: 20px 0 -10px 0; display: block;">메일 서명 시안</h3>
+    <div style="display: table; font-family: pretendard; width: auto; padding: 30px 20px 0 0; border-top: 1px solid #cccccc; margin-top: 30px;">
+        <div style="display: table-row;">
+            <div style="display: table-cell;">
+                <div aria-label="로고 영역">
+                    <p style="margin: 0 0 10px 20px;">
+                        <img src="https://cdnimg.apti.co.kr/aegisep/aegisep.png" border="0" alt="이지스로고">
+                    </p>
+                </div>
+                <div aria-label="내정보 영역"
+                    style="font-size: 12px; line-height: 180%; padding-top: 10px; padding-left: 20px; margin: 0;">
+                    <span style="font-size: 15px; color: #222222;">최웅</span>
+                    <p style="font-size: 12px; color: #666666; margin: 0;">
+                        <span style="font-size: 9pt;">(주)이지스엔터프라이즈 | 디자인파트 | 대리</span>
+                    </p>
+                </div>
+                <div style="line-height: 124%; padding-top: 10px; padding-left: 20px;">
+                    <p style="margin: 0; display: block;">
+                        <span style="color: #d9382e; font-size: 9pt; margin-right: 6px;">Direct.</span>
+                        <span style="color: #666666; font-size: 10pt;">02-6281-7259</span>
+                    </p>
+                    <p style="margin: 0; display: block;">
+                        <span style="color: #d9382e; font-size: 9pt; margin-right: 6px;">Mobile.</span>
+                        <span style="color: #666666; font-size: 10pt;">010-5172-0498</span>
+                    </p>
+                    <p style="margin: 0; display: block;">
+                        <span style="color: #d9382e; font-size: 9pt; margin-right: 6px;">E-mail.</span>
+                        <span style="color: #666666; font-size: 10pt;">webd90@aegisep.com</span>
+                    </p>
+                    <p style="margin: 0; display: block;">
+                        <span style="color: #d9382e; font-size: 9pt; margin-right: 6px;">address.</span>
+                        <span style="color: #666666; font-size: 10pt;">서울시 금천구 가산디지털2로 98 IT캐슬 2동 714호</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 👉 복사될 코드 박스 -->
+<div style="display: flex; flex-direction: column;">
+<div style="display: flex; justify-content: space-between;">
+<h3 style="margin: 20px 0; display: inline-block">메일 서명 코드</h3>
+<!-- 👉 복사 버튼 -->
+<button class="copy-btn" onclick="copySignature()">코드 복사</button>
+</div>
+<pre style="font-size: 13px; margin: 0 0 -10px;">
+<code id="signatureCode" class="code-box">
+&lt;link rel="stylesheet" as="style" crossorigin=""href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css"&gt;
+&lt;div style=&quot;display: table; font-family: pretendard; width: auto; padding: 30px 20px 0 0; border-top: 1px solid #cccccc; margin-top: 30px; &quot;&gt;
+    &lt;div style=&quot;display: table-row; font-family: pretendard;&quot;&gt;
+        &lt;div style=&quot;display: table-cell;&quot;&gt;
+            &lt;div arai-label=&quot;로고 영역&quot;&gt;
+                &lt;p style=&quot;margin: 0px 0px 10px 20px;&quot;&gt;
+                    &lt;img src=&quot;https://cdnimg.apti.co.kr/aegisep/aegisep.png&quot; border=&quot;0&quot; alt=&quot;이지스로고&quot;&gt;
+                &lt;/p&gt;
+            &lt;/div&gt;
+            &lt;div aria-label=&quot;내정보 영역&quot; style=&quot;font-size: 12px; line-height: 180%; padding-top: 10px; padding-left: 20px; margin: 0;&quot;&gt;
+                &lt;span  aira-label=&quot;이름&quot;style=&quot;font-family: pretendard; font-size: 11pt; margin: 0; padding: 0; font-size: 15px; color: #222222;&quot;&gt;최웅&lt;/span&gt;
+                &lt;p aria-label=&quot;팀, 직급 정보&quot; style=&quot;font-size: 12px; color: #666666; font-family: pretendard; margin: 0;&quot;&gt;
+                    &lt;span style=&quot;font-size: 9pt; font-family: pretendard;&quot;&gt;
+                        &lt;span style=&quot;font-family: pretendard; font-size: 9pt;&quot;&gt;(주)이지스엔터프라이즈 | 디자인파트 | 대리&lt;/span&gt;
+                    &lt;/span&gt;
+                &lt;/p&gt;
+            &lt;/div&gt;
+            &lt;div style=&quot;line-height: 124%; padding-top: 10px; padding-left: 20px; margin-top: 0px; margin-bottom: 0px; &quot;&gt;
+                &lt;p style=&quot;margin: 0; display: block;&quot;&gt;
+                    &lt;span aria-label=&quot;직통번호&quot; style=&quot;font-size: 9pt; font-family: pretendard; color: #d9382e; display: inline-block; margin-right: 6px;&quot;&gt;Direct.&lt;/span&gt;
+                    &lt;span aria-label=&quot;번호영역&quot; style=&quot;color: #666666; font-size: 10pt; font-family: pretendard;&quot;&gt;
+                        02-6281-7259
+                    &lt;/span&gt;
+                &lt;/p&gt;
+                &lt;p style=&quot;margin: 0; display: block;&quot;&gt;
+                    &lt;span aria-label=&quot;핸드폰번호&quot; style=&quot;font-size: 9pt; font-family: pretendard; color: #d9382e; display: inline-block; margin-right: 6px;&quot;&gt;Mobile.&lt;/span&gt;
+                    &lt;span aria-label=&quot;번호영역&quot; style=&quot;color: #666666; font-size: 10pt; font-family: pretendard;&quot;&gt;
+                        010-5172-0498
+                    &lt;/span&gt;
+                &lt;/p&gt;
+                &lt;p style=&quot;margin: 0; display: block;&quot;&gt;
+                    &lt;span aria-label=&quot;직통번호&quot; style=&quot;font-size: 9pt; font-family: pretendard; color: #d9382e; display: inline-block; margin-right: 6px;&quot;&gt;E-mail.&lt;/span&gt;
+                    &lt;span aria-label=&quot;메일영역&quot; style=&quot;color: #666666; text-decoration: none; font-size: 10pt;&quot;&gt;
+                        &lt;span style=&quot;font-size: 10pt; font-family: pretendard;&quot;&gt;webd90@aegisep.com&lt;/span&gt;
+                    &lt;/span&gt;
+                &lt;/p&gt;
+                &lt;p style=&quot;margin: 0; display: block;&quot;&gt;
+                    &lt;span aria-label=&quot;회사주소&quot; style=&quot;font-size: 9pt; font-family: pretendard; color: #d9382e; display: inline-block; margin-right: 6px;&quot;&gt;address.&lt;/span&gt;
+                    &lt;span aria-label=&quot;주소영역&quot; style=&quot;color: #666666; text-decoration: none; font-size: 10pt;&quot;&gt;
+                        &lt;span style=&quot;font-size: 10pt; font-family: pretendard;&quot;&gt;서울시 금천구 가산디지털2로 98 IT캐슬 2동 714호&lt;/span&gt;
+                    &lt;/span&gt;
+                &lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code>
+</pre>
+</div>
+
+
+<script>
+    function copySignature() {
+        const code = document.getElementById("signatureCode").innerText;
+        navigator.clipboard.writeText(code).then(() => {
+            alert("메일 서명 코드가 복사되었습니다!");
+        }).catch(() => {
+            alert("복사에 실패했습니다. 직접 복사해주세요.");
+        });
+    }
+</script>
+
+</body>
+
+</html>
